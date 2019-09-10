@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>connect four</title>
+        <script type="text/javascript" src="mcfjs.js">
+        </script>
+        <link rel="stylesheet" href="mcfcss.css">
+
+    </head>
+    <body onload="beginGame();">
+        <h1>Connect Four</h1>
+        <button id="reset_game" onclick="resetGame();" class="button button1">Reset Game</button>
+        <div id="gameboard">
+            <div id="game_info">
+            </div>
+            <table id="game_table">
+                <thead>
+                    <tr>
+                        <td><button onclick="drop(0);" class="button">Drop</button></td>
+                        <td><button onclick="drop(1);" class="button">Drop</button></td>
+                        <td><button onclick="drop(2);" class="button">Drop</button></td>
+                        <td><button onclick="drop(3);" class="button">Drop</button></td>
+                        <td><button onclick="drop(4);" class="button">Drop</button></td>
+                        <td><button onclick="drop(5);" class="button">Drop</button></td>
+                        <td><button onclick="drop(6);" class="button">Drop</button></td>
+                    </tr>
+                </thead>
+                <script>
+                    for(var row=0;row<=5;row++){
+                        document.writeln("<tr>");
+                        for(var col=0;col<=6;col++){
+                            document.writeln("<td id='square_"+row+"_"+col+"'class='board_square'></td>");
+                        }
+                        document.writeln("</tr>");
+                    }
+                </script>
+            </table>
+            <div id="game_status">
+            </div>
+        </div>
+    </body>
+</html>
